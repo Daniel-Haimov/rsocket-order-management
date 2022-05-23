@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.birkagal'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring MongoDB and RSocket
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-rsocket:2.5.6'
+    // Spring testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.1'
+    testImplementation 'io.projectreactor:reactor-test:3.4.12'
+}
+
+test {
+    useJUnitPlatform()
+}
